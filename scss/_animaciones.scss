@@ -1,0 +1,40 @@
+// Animaciones
+/* Imagenes Responsive */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+/* CSS - Texto con Degradado */
+.fluido {
+    animation: fluido 4s ease-in-out infinite;
+    background: linear-gradient(-45deg, #7e0c0c, #CD1818, #E45826, #FF6701, #FA7D09, #FF8C32);
+    background-size: 300%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    }
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% }
+}
+/* CSS - Texto Animado */
+.texto-animado {
+    animation-name: texto;
+    animation-duration: 2s;
+}
+@keyframes texto {
+    from {
+        transform: translate(-400px);
+    }
+    to {
+        transform: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Display Off */
+    .section-off {
+        display: none;
+    }
+}

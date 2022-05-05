@@ -1,0 +1,24 @@
+// Origin
+/* Estilos Generales */
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.border {
+    border: solid 2px #E45826;
+}
+.border-bottom {
+    border-bottom: solid 2px #E45826;
+}
+.border-top {
+    border-top: solid 2px #E45826;
+  }
+// Import
+@import "fuentes";
+@import "textos";
+@import "fondos";
+@import "animaciones";
+@import "colores";
+@import "responsive";

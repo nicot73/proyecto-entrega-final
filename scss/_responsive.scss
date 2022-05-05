@@ -1,0 +1,826 @@
+// Responsive
+// Mixin
+@mixin tamanio($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+/* Mobile First */
+/* Smartphone */
+@media (max-width: 480px) {
+    header, nav, #destacados, #productos, #informacion, #contactar, #visitar, #horario {
+        padding: 20px 20px;
+    }
+    /* Encabezado */
+    header {
+        a {
+            text-decoration: none;
+            color: $atajoAbajo;
+        }
+        img {
+            padding: 8px;
+        }
+    }
+    /* Menu */
+    nav {
+        background-image: $menuPrincipal;
+        padding: 8px;
+        border-radius: 3px;
+        align-content: center;
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            margin-top: 6px;
+            &:hover {
+                border-radius: 3px;
+            }
+        }
+    }
+    /* Cuerpo */
+    .centrar-div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around; 
+    }
+    /* Menu Productos */
+    .centrar-nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .centrar-texto {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .clase-menu {
+        width: 160px;
+        height: 160px;
+        margin: 5px;
+        padding: 5px;
+        background-image: linear-gradient(to right, #1f1c2c, #434343);
+        border-radius: 3px;
+    }
+    /* Info */
+    .seccion-universal {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .contactar {
+        @extend .seccion-universal;
+        text-align: center;
+        padding: 10px;
+    }
+    .visitar {
+        @extend .seccion-universal;
+    }
+    .horario {
+        @extend .seccion-universal;
+    }
+    /* Pie Pag */
+    .centrar-pie {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    footer {
+        img {
+            padding-right: 8px;
+            padding-left: 8px;
+            padding-bottom: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    /* Pag Productos */
+    aside {
+        ul{
+            li{
+                background-color: $btnAside;
+                margin-left: 8px;
+                margin-bottom: 8px;
+                padding: 8px 18px;
+                border-radius: 3px;
+                width: 140px;
+                &:hover {
+                    border-left: solid 6px $btnBorde;
+                    background-color: $btnSeleccion;
+                    cursor: pointer;
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    section {
+        article {
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: space-around;
+            section {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+            }
+            div {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    /* Pag Visitanos */
+    iframe {
+        @include tamanio(300px,450px)
+    }
+    /* Grid Areas */
+    /* Index */
+    #grid-index {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna 7 Filas */
+        "encabezado"
+        "menu"
+        "carrusel"
+        "destacados"
+        "productos"
+        "informacion"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Productos */
+    #grid-productos {
+        display: grid;
+        grid-template-areas: 
+        /* 2 Columna 4 Filas */
+        "encabezado encabezado"
+        "menu menu"
+        "menu-lat stock"
+        "pie pie";
+        grid-template-columns: 40% 60%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Nosotros */
+    #grid-nosotros {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "nosotros"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Contacto */
+    #grid-contacto {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "mensaje"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Visitanos */
+    #grid-visitanos {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "mapa"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    header {
+        grid-area: encabezado;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+    }
+    nav {
+        grid-area: menu;
+    }
+    #carrusel {
+        grid-area: carrusel;
+    }
+    #destacados {
+        grid-area: destacados;
+    }
+    #productos {
+        grid-area: productos;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    #informacion {
+        grid-area: informacion;
+    }
+    footer {
+        grid-area: pie;
+    }
+    /* Pag Productos */
+    #menu-lat {
+        grid-area: menu-lat;
+    }
+    #stock {
+        grid-area: stock;
+    }
+    /* Pag Nosotros */
+    #nosotros {
+        grid-area: nosotros;
+    }
+    /* Pag Contacto */
+    #mensaje {
+        grid-area: mensaje;
+    }
+    /* Pag Visitanos */
+    #mapa {
+        grid-area: mapa;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1023px) {
+    #destacados, #productos, #informacion, #contactar, #visitar, #horario {
+        padding: 30px 10px;
+    }
+    /* Encabezado */ 
+    header {
+        a {
+            text-decoration: none;
+            color: $atajoAbajo;
+        }
+        img {
+            padding: 8px;
+        }
+    }
+    .atajo-abajo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-self: end;
+    }
+    /* Menu */ 
+    nav {
+        background-image: $menuPrincipal;
+        padding: 8px;
+        border-radius: 3px;
+        align-content: center;
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            margin-top: 6px;
+            &:hover {
+                border-radius: 3px;
+                border-left: solid 6px $btnBorde;
+                background-color: $btnSeleccion;
+                cursor: pointer;
+            }
+        }
+    }
+    /* Cuerpo */
+    .centrar-div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around; 
+    }
+    /* Menu Productos */
+    .centrar-nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .centrar-texto {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .clase-menu {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        background-image: $menuPrincipal;
+        border-radius: 3px;
+    }
+    /* Info */
+    .info {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .contactar {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .visitar {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+    }
+    .horario {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+    }
+    /* Pie Pag */
+    footer {
+        img {
+            padding-right: 8px;
+            padding-left: 8px;
+            padding-bottom: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    .centrar-pie {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    /* Pag Productos */
+    aside {
+        ul {
+            li {
+                background-color: $btnAside;
+                margin-left: 8px;
+                margin-bottom: 8px;
+                padding: 8px 20px;
+                border-radius: 3px;
+                width: 150px;
+                &:hover {
+                    border-left: solid 8px $btnBorde;
+                    background-color: $btnSeleccion;
+                    cursor: pointer;
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    section {
+        article {
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: space-around;
+            section {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+            }
+            div {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .centrar-aside {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    /* Grid Areas */
+    #grid-index {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna 7 Filas */
+        "encabezado"
+        "menu"
+        "carrusel"
+        "destacados"
+        "productos"
+        "informacion"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Productos */
+    #grid-productos {
+        display: grid;
+        grid-template-areas: 
+        /* 2 Columna 4 Filas */
+        "encabezado encabezado"
+        "menu menu"
+        "menu-lat stock"
+        "pie pie";
+        grid-template-columns: 34% 66%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Nosotros */
+    #grid-nosotros {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "nosotros"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Contacto */
+    #grid-contacto {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "mensaje"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Visitanos */
+    #grid-visitanos {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "mapa"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    header {
+        grid-area: encabezado;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    nav {
+        grid-area: menu;
+    }
+    #carrusel {
+        grid-area: carrusel;
+    }
+    #destacados {
+        grid-area: destacados;
+    }
+    #productos {
+        grid-area: productos;
+    }
+    #informacion {
+        grid-area: informacion;
+    }
+    footer {
+        grid-area: pie;
+    }
+    /* Pag Productos */
+    #menu-lat {
+        grid-area: menu-lat;
+    }
+    #stock {
+        grid-area: stock;
+    }
+    /* Pag Nosotros */
+    #nosotros {
+        grid-area: nosotros;
+    }
+    /* Pag Contacto */
+    #mensaje {
+        grid-area: mensaje;
+    }
+    /* Pag Visitanos */
+    #mapa {
+        grid-area: mapa;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #destacados, #productos, #informacion, #contactar, #visitar, #horario {
+        padding: 30px 10px;
+    }
+    /* Encabezado */
+    header {
+        a {
+            text-decoration: none;
+            color: $atajoAbajo;
+        }
+        img {
+            padding: 8px;
+        }
+    }
+    .atajo-abajo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-self: end;
+    }
+    /* Menu */
+    nav {
+        background-image: $menuPrincipal;
+        padding: 8px;
+        border-radius: 3px;
+        align-content: center;
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }  
+    ul {
+        list-style-type: none;
+        li {
+            margin-left: 8px;
+            padding: 2px 8px;
+            &:hover {
+                border-radius: 3px;
+                border-left: solid 8px $btnBorde;
+                background-color: $btnSeleccion;
+                cursor: pointer;
+            }
+        }
+    }
+    .centrar-div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly; 
+    }
+    /* Menu Productos */
+    .centrar-nav {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    .centrar-texto {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .clase-menu {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        padding: 5px;
+        background-image: $menuPrincipal;
+        border-radius: 3px;
+    }
+    /* Info */
+    .info {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .contactar {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+    .visitar {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+    }
+    .horario {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+    }
+    /* Pie Pag */
+    footer {
+        img {
+            padding-right: 8px;
+            padding-left: 8px;
+            padding-bottom: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    .centrar-pie {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    /* Pag Productos */
+    aside {
+        ul {
+            li {
+                background-color: $btnAside;
+                margin-left: 8px;
+                margin-bottom: 8px;
+                padding: 8px 20px;
+                border-radius: 3px;
+                width: 150px;
+                &:hover {
+                    border-left: solid 6px $btnBorde;
+                    background-color: $btnSeleccion;
+                    cursor: pointer;
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }
+    section {
+        article {
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: space-around;
+            section {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+            }
+            div {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .centrar-aside {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    /* Grid Areas */
+    #grid-index {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna 7 Filas */
+        "encabezado"
+        "menu"
+        "carrusel"
+        "destacados"
+        "productos"
+        "informacion"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Productos */
+    #grid-productos {
+        display: grid;
+        grid-template-areas: 
+        /* 2 Columna 4 Filas */
+        "encabezado encabezado"
+        "menu menu"
+        "menu-lat stock"
+        "pie pie";
+        grid-template-columns: 20% auto;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Nosotros */
+    #grid-nosotros {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "nosotros"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Contacto */
+    #grid-contacto {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "mensaje"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    /* Visitanos */
+    #grid-visitanos {
+        display: grid;
+        grid-template-areas: 
+        /* 1 Columna, 4 Filas */
+        "encabezado"
+        "menu"
+        "mapa"
+        "pie";
+        grid-template-columns: 100%;
+        /* Espacios */
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    header {
+        grid-area: encabezado;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-around;
+    }
+    nav {
+        grid-area: menu;
+    }
+    #carrusel {
+        grid-area: carrusel;
+    }
+    #destacados {
+        grid-area: destacados;
+    }
+    #productos {
+        grid-area: productos;
+    }
+    #informacion {
+        grid-area: informacion;
+    }
+    footer {
+        grid-area: pie;
+    }
+    /* Pag Productos */
+    #menu-lat {
+        grid-area: menu-lat;
+    }
+    #stock {
+        grid-area: stock;
+    }
+    /* Pag Nosotros */
+    #nosotros {
+        grid-area: nosotros;
+    }
+    /* Pag Contacto */
+    #mensaje {
+        grid-area: mensaje;
+    }
+    /* Pag Visitanos */
+    #mapa {
+        grid-area: mapa;
+    }
+}

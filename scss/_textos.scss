@@ -1,0 +1,225 @@
+// Titulos
+/* Titulos */
+/* Smartphone */
+@media (max-width: 480px) {
+    /* Encabezado */
+    h1 {
+        font-size: 2rem;
+        font-family: 'FullPack2025';
+        color: #fa7d09;
+        text-align: center;
+        font-weight: bolder;
+        margin: 2px;
+        padding: 15px;
+    }
+    /* Cuerpo */
+    section {
+        h2 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+    section {
+        div {
+            div {
+                a{
+                    text-decoration: none;
+                    p {
+                        font-family: 'AmazingViews';
+                        text-align: center;
+                        font-size: 1.2rem;
+                        margin: 0;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+    /* Pie Pag */
+    footer {
+        p {
+            font-size: 0.75rem;
+        }
+    }
+    /* Pag Productos */
+    aside {
+        h2 {
+            font-family: 'AmazingViews';
+            font-size: 1.5rem;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+    section {
+        article {
+            h5, p {
+                color: #1B1A17;
+            }
+        }
+    }
+    /* Pag Nosotros */
+    main {
+        h2 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+}
+/* Tablet */
+@media (min-width: 481px) and (max-width:1023px) {
+    /*Encabezado */
+    h1 {
+        font-size: 2.5rem;
+        font-family: 'FullPack2025';
+        text-align: center;
+        font-weight: bolder;
+        color: #FA7D09;
+        margin: 2px;
+        padding: 15px;
+    }
+    /* Cuerpo */
+    section {
+        h2 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 6px;
+        }
+        h3 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 3px;
+        }
+    }
+    section {
+        div {
+            div {
+                a{
+                    text-decoration: none;
+                    p {
+                        font-family: 'AmazingViews';
+                        text-align: center;
+                        font-size: 1.3rem;
+                        margin: 0;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+    /* Pag Productos */
+    aside {
+        h2 {
+            font-family: 'AmazingViews';
+            font-size: 1.5rem;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+    section {
+        article {
+            h5, p {
+                color: #1B1A17;
+            }
+        }
+    }
+    /* Pag Nosotros */
+    main {
+        h2 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 2rem;
+        }
+        h3 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1.8rem;
+        }
+    }
+}
+/* Desktop */
+@media (min-width: 1024px) {
+    /* Encabezado */
+    h1 {
+        font-size: 3.5rem;
+        font-family: 'FullPack2025';
+        text-align: center;
+        font-weight: bolder;
+        color: #FA7D09;
+        margin: 2px;
+        padding: 15px;
+    }
+    /* Cuerpo */ 
+    section {
+        h2 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 2rem;
+            padding: 8px;
+        }
+        h3 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 4px;
+        }
+    }
+    section {
+        div {
+            div {
+                a{
+                    text-decoration: none;
+                    p {
+                        font-family: 'AmazingViews';
+                        text-align: center;
+                        font-size: 1.3rem;
+                        margin: 0;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+    /* Pag Productos */
+    aside {
+        h2 {
+            font-family: 'AmazingViews';
+            font-size: 1.8rem;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+    section {
+        article {
+            h5, p {
+                color: #1B1A17;
+            }
+        }
+    }
+    /* Pag Nosotros */
+    main {
+        h2 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        h3 {
+            font-family: 'AmazingViews';
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+}
