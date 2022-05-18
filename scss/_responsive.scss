@@ -1,9 +1,5 @@
 // Responsive
-// Mixin
-@mixin tamanio($ancho, $alto) {
-    width: $ancho;
-    height: $alto;
-}
+
 /* Mobile First */
 /* Smartphone */
 @media (max-width: 480px) {
@@ -69,21 +65,22 @@
         border-radius: 3px;
     }
     /* Info */
-    .seccion-universal {
+    .contactar {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-    }
-    .contactar {
-        @extend .seccion-universal;
         text-align: center;
         padding: 10px;
     }
     .visitar {
-        @extend .seccion-universal;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
     }
     .horario {
-        @extend .seccion-universal;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
     }
     /* Pie Pag */
     .centrar-pie {
@@ -107,9 +104,9 @@
         ul{
             li{
                 background-color: $btnAside;
-                margin-left: 8px;
-                margin-bottom: 8px;
-                padding: 8px 18px;
+                margin-left: 5px;
+                margin-bottom: 5px;
+                padding: 5px 12px;
                 border-radius: 3px;
                 width: 140px;
                 &:hover {
@@ -140,9 +137,18 @@
             }
         }
     }
+    .centrar-aside {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        height: 1100px;
+    }
     /* Pag Visitanos */
     iframe {
-        @include tamanio(300px,450px)
+        width: 300px;
+        height: 450px;
     }
     /* Grid Areas */
     /* Index */
@@ -388,9 +394,9 @@
         ul {
             li {
                 background-color: $btnAside;
-                margin-left: 8px;
-                margin-bottom: 8px;
-                padding: 8px 20px;
+                margin-left: 5px;
+                margin-bottom: 5px;
+                padding: 5px 12px;
                 border-radius: 3px;
                 width: 150px;
                 &:hover {
@@ -421,10 +427,20 @@
             }
         }
     }
+    /* Pag Visitanos */
+    @media (max-width: 620px) {
+        iframe {
+            width: 400px;
+            height: 500px;
+        }
+    }
     .centrar-aside {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        position: sticky;
+        top: 0;
+        height: 1100px;
     }
     /* Grid Areas */
     #grid-index {
@@ -452,7 +468,7 @@
         "menu menu"
         "menu-lat stock"
         "pie pie";
-        grid-template-columns: 34% 66%;
+        grid-template-columns: 1fr 5fr;
         /* Espacios */
         grid-column-gap: 5px;
         grid-row-gap: 5px;
@@ -667,9 +683,9 @@
         ul {
             li {
                 background-color: $btnAside;
-                margin-left: 8px;
-                margin-bottom: 8px;
-                padding: 8px 20px;
+                margin-left: 5px;
+                margin-bottom: 5px;
+                padding: 5px 12px;
                 border-radius: 3px;
                 width: 150px;
                 &:hover {
@@ -704,6 +720,14 @@
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        position: sticky;
+        top: 0;
+        height: 1100px;
+    }
+    /* Pag Visitanos */
+    iframe {
+        width: 650px;
+        height: 550px;
     }
     /* Grid Areas */
     #grid-index {
@@ -731,7 +755,7 @@
         "menu menu"
         "menu-lat stock"
         "pie pie";
-        grid-template-columns: 20% auto;
+        grid-template-columns: 1fr 5fr;
         /* Espacios */
         grid-column-gap: 5px;
         grid-row-gap: 5px;

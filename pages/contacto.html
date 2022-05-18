@@ -61,17 +61,20 @@
         <main id="mensaje" class="border contactar">
             <h3 class="texto-animado">Formulario de contacto</h3>
             <!-- Cajas -->
-            <form action="">
-                <label for="nombre">Nombre completo:</label><br>
-                <input type="name" name="nombre"><br>
-                <label for="email">E-mail:</label><br>
-                <input type="email"><br>
-                <label for="comentarios">Comentarios</label><br>
-                <textarea  width="300px" name="comentarios" cols="50" rows="10"></textarea><br>
-                <!-- Botones-->
-                <input type="reset" value="Limpiar formulario">
-                <input type="submit" value="Enviar formulario">
-            </form>
+            <div class="conteiner border-padding">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre Completo:</label>
+                    <input class="form-control" type="text" placeholder="Nombre Apellido" aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+                </div>
+            </div>
         </main>
         <!-- Pie de Pagina -->
         <footer id="abajo" class="py-3 my-4">
